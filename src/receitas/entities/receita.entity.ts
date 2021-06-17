@@ -20,7 +20,7 @@ export class Receita {
   @ApiProperty({type: String})
   Ingredientes: Array<string>;
   @Prop()
-  @ApiProperty({type: String})
+  @ApiProperty({type: Preparo})
   preparo: Preparo;
 }
 

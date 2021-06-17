@@ -9,32 +9,32 @@ import { ApiBody } from '@nestjs/swagger';
 export class ReceitasController {
   constructor(private readonly receitasService: ReceitasService) {}
 
-  @Post()
   @ApiBody({type: CreateReceitaDto})
+  @Post()
   create(@Body() createReceitaDto: CreateReceitaDto) {
     return this.receitasService.create(createReceitaDto);
   }
 
-  @Get()
   @ApiBody({type: CreateReceitaDto})
+  @Get()
   async findAll(): Promise<Receita[]> {
     return this.receitasService.findAll();
   }
 
-  @Get(':id')
   @ApiBody({type: CreateReceitaDto})
+  @Get(':id')
   findOne(@Param('id') id: string) {
     return this.receitasService.findOne(id);
   }
 
-  @Patch(':id')
   @ApiBody({type: CreateReceitaDto})
+  @Patch(':id')
   update(@Param('id') id: string, @Body() updateReceitaDto: UpdateReceitaDto) {
     return this.receitasService.update(id, updateReceitaDto);
   }
 
-  @Delete(':id')
   @ApiBody({type: CreateReceitaDto})
+  @Delete(':id')
   remove(@Param('id') id: string) {
     return this.receitasService.remove(id);
   }
