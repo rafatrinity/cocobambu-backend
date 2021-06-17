@@ -34,6 +34,7 @@
     "@nestjs/mongoose": "^7.2.4",
     "@nestjs/platform-express": "^7.6.15",
     "@nestjs/swagger": "^4.8.0",
+    "fastify-swagger": "^4.7.0",
     "mongoose": "^5.12.14",
     "reflect-metadata": "^0.1.13",
     "rimraf": "^3.0.2",
