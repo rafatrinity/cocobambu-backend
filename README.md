@@ -24,7 +24,7 @@
 
 ## Description
 
-[Nest](https://cocobambu.herokuapp.com/api/) documentação interativa swagger.
+[Swagger](https://cocobambu.herokuapp.com/api/) documentação interativa swagger.
 
 ## Installation
 
