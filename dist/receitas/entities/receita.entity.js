@@ -11,24 +11,29 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.ReceitaSchema = exports.Receita = void 0;
 const mongoose_1 = require("@nestjs/mongoose");
+const swagger_1 = require("@nestjs/swagger");
 class Preparo {
 }
 let Receita = class Receita {
 };
 __decorate([
     mongoose_1.Prop(),
+    swagger_1.ApiProperty({ type: String }),
     __metadata("design:type", String)
 ], Receita.prototype, "nome", void 0);
 __decorate([
     mongoose_1.Prop(),
+    swagger_1.ApiProperty({ type: String }),
     __metadata("design:type", String)
 ], Receita.prototype, "desc", void 0);
 __decorate([
     mongoose_1.Prop(),
+    swagger_1.ApiProperty({ type: String }),
     __metadata("design:type", Array)
 ], Receita.prototype, "Ingredientes", void 0);
 __decorate([
     mongoose_1.Prop(),
+    swagger_1.ApiProperty({ type: Preparo }),
     __metadata("design:type", Preparo)
 ], Receita.prototype, "preparo", void 0);
 Receita = __decorate([

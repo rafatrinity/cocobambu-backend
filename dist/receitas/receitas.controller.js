@@ -17,6 +17,7 @@ const common_1 = require("@nestjs/common");
 const receitas_service_1 = require("./receitas.service");
 const create_receita_dto_1 = require("./dto/create-receita.dto");
 const update_receita_dto_1 = require("./dto/update-receita.dto");
+const swagger_1 = require("@nestjs/swagger");
 let ReceitasController = class ReceitasController {
     constructor(receitasService) {
         this.receitasService = receitasService;
@@ -38,6 +39,7 @@ let ReceitasController = class ReceitasController {
     }
 };
 __decorate([
+    swagger_1.ApiBody({ type: create_receita_dto_1.CreateReceitaDto }),
     common_1.Post(),
     __param(0, common_1.Body()),
     __metadata("design:type", Function),
@@ -45,12 +47,14 @@ __decorate([
     __metadata("design:returntype", void 0)
 ], ReceitasController.prototype, "create", null);
 __decorate([
+    swagger_1.ApiBody({ type: create_receita_dto_1.CreateReceitaDto }),
     common_1.Get(),
     __metadata("design:type", Function),
     __metadata("design:paramtypes", []),
     __metadata("design:returntype", Promise)
 ], ReceitasController.prototype, "findAll", null);
 __decorate([
+    swagger_1.ApiBody({ type: create_receita_dto_1.CreateReceitaDto }),
     common_1.Get(':id'),
     __param(0, common_1.Param('id')),
     __metadata("design:type", Function),
@@ -58,6 +62,7 @@ __decorate([
     __metadata("design:returntype", void 0)
 ], ReceitasController.prototype, "findOne", null);
 __decorate([
+    swagger_1.ApiBody({ type: create_receita_dto_1.CreateReceitaDto }),
     common_1.Patch(':id'),
     __param(0, common_1.Param('id')), __param(1, common_1.Body()),
     __metadata("design:type", Function),
@@ -65,6 +70,7 @@ __decorate([
     __metadata("design:returntype", void 0)
 ], ReceitasController.prototype, "update", null);
 __decorate([
+    swagger_1.ApiBody({ type: create_receita_dto_1.CreateReceitaDto }),
     common_1.Delete(':id'),
     __param(0, common_1.Param('id')),
     __metadata("design:type", Function),
