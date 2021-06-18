@@ -6,5 +6,9 @@ export class CreateReceitaDto {
         tempo: string;
         passos: Array<string>;
     }
+    image:{
+        thumb:string;
+        foto:string;
+    }
 }
 

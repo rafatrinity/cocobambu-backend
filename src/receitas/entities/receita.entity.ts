@@ -8,6 +8,10 @@ class Preparo {
   tempo: string;
   passos: Array<string>;
 }
+class Image {
+  thumb: string;
+  foto: string;
+}
 @Schema()
 export class Receita {
   @Prop()
@@ -22,6 +26,9 @@ export class Receita {
   @Prop()
   @ApiProperty({type: Preparo})
   preparo: Preparo;
+  @Prop()
+  @ApiProperty({type: Image})
+  image: Image;
 }
 
 export const ReceitaSchema = SchemaFactory.createForClass(Receita);
